@@ -123,6 +123,11 @@ class Client
             case 'repositories':
                 $api = new Api\Repo($this);
                 break;
+           
+            case 'team':
+            case 'teams':
+                $api = new Api\Organization\Teams($this);
+                break;
 
             case 'user':
             case 'users':
